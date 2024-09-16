@@ -57,7 +57,9 @@ body {
 }
 
 .get-started,
-.learn-more {
+.learn-more,
+.sign-up,
+.be-pro {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: bold;
@@ -66,12 +68,14 @@ body {
   border: 2px solid #000;
 }
 
-.get-started {
+.get-started,
+.be-pro {
   background-color: #000;
   color: #fff;
 }
 
-.learn-more {
+.learn-more,
+.sign-up {
   background-color: #fff;
   color: #000;
 }
@@ -120,13 +124,111 @@ body {
   margin: 1.5rem 0;
 }
 
-.services{
+.services {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.services .options{
-  border: 1px solid black;
+.services .options {
+  padding: 2rem 1rem;
+  border: 2px solid black;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* .text-content  */
+.services .options h2 {
+  margin: 0;
+}
+
+.services .content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.services button {
+  margin-right: 0.5rem;
+}
+
+.faq-section {
+  /* background-color: #f9f9f9; */
+  /* padding: 40px; */
+  height: 100vh;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footerColumn {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.footerColumn h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footerBottom span {
+  margin-right: 20px;
+  cursor: pointer;
+}

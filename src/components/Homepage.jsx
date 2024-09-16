@@ -1,5 +1,7 @@
 import styles from "../styles/Homepage.module.css";
-
+import { FAQItem } from "./FAQItem";
+import Footer from "./Footer";
+import { faqs } from "./Utility/faqs";
 function HomePage() {
   return (
     <div className={styles["homepage-container"]}>
@@ -77,9 +79,12 @@ function HomePage() {
         </section>
 
         <section className={`${styles["section"]} ${styles.services}`}>
-          <div>
-            <div className={styles["image-placeholder"]}>
-              <div className={styles["placeholder"]}></div>
+          <div className={styles.content}>
+            <div className={styles["image-placeholder"]} style={{ margin: 0 }}>
+              <div
+                className={styles["placeholder"]}
+                style={{ height: "100%" }}
+              ></div>
             </div>
             <div
               className={`${styles["text-content"]} ${styles["services-text-content"]}`}
@@ -115,24 +120,45 @@ function HomePage() {
             </div>
           </div>
           <div className={`${styles.options}`}>
-            <h2>Find Trusted Professionals/Jobs on Ezfix</h2>
-            <small>Start using Ezfix Today</small>
+            <div>
+              <h2>Find Trusted Professionals/Jobs on Ezfix</h2>
+              <small>Start using Ezfix Today</small>
+            </div>
+            <div>
+              <button className={styles["sign-up"]}>Sign Up</button>
+              <button className={styles["be-pro"]}>Be Pro</button>
+            </div>
           </div>
-          <div className={styles["buttons"]}>
-            <button className={styles["learn-more"]}>Sign Up</button>
-            <button className={styles["get-started"]}>Be Pro</button>
-          </div>
-
           <div className={`${styles.options}`}>
-            <h2>Stay Updated with Home Maintenance Tips</h2>
-            <small>Subscribe to our newsletter for helpful tips and updates</small>
+            <div>
+              <h2>Stay Updated with Home Maintenance Tips</h2>
+              <small>
+                Subscribe to our newsletter for helpful tips and updates
+              </small>
+            </div>
+            <div>
+              <button className={styles["sign-up"]}>Sign Up</button>
+              <button className={styles["be-pro"]}>Be Pro</button>
+            </div>
           </div>
-          {/* <div className={styles["buttons"]}>
-            <button className={styles["learn-more"]}>Sign Up</button>
-            <button className={styles["get-started"]}>Be Pro</button>
-          </div> */}
-
         </section>
+
+        <section className={`${styles["faq-section"]}`}>
+          <div style={{ padding: "40px" }}>
+            <h2>Frequently asked questions</h2>
+            {faqs.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            ))}
+          </div>
+
+          <Footer />
+        </section>
+
+        {/* <section ></section> */}
       </main>
     </div>
   );
