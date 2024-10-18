@@ -27,3 +27,14 @@
   color: #000;
   font-weight: bold;
 }
+
+.logout-button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+}

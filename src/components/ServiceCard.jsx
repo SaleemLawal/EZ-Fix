@@ -1,15 +1,12 @@
-import React from 'react';
+// ServiceCard.js
+import "../styles/ServiceCard.css";
 
-// interface ServiceCardProps {
-//   imageSrc: string;
-//   title: string;
-// }
-
-const ServiceCard = ({ imageSrc, title }) => {
+// eslint-disable-next-line react/prop-types
+const ServiceCard = ({ title, imageUrl }) => {
   return (
     <div className="service-card">
-      <img src={imageSrc} alt={title} className="service-card-image" />
-      <p>{title}</p>
+      <img src={imageUrl} alt={title} className="service-image" />
+      <p className="service-text">{title}</p>
     </div>
   );
 };

@@ -1,12 +1,22 @@
 import styles from "../styles/Login.module.css";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
+// eslint-disable-next-line react/prop-types
+function Login({ handleLogin }) {
+  const navigate = useNavigate();
+
+  const onLoginSubmit = (event) => {
+    event.preventDefault();
+    handleLogin();
+    navigate("/homepage");
+  };
+
   return (
     <div className={styles["login-container"]}>
       <h1>EZFIX</h1>
       <div className={styles["login-box"]}>
         <h2>Log In</h2>
-        <form>
+        <form onSubmit={onLoginSubmit}>
           <div className={styles["input-container"]}>
             <input type="email" placeholder="Email Address" />
           </div>
@@ -16,7 +26,9 @@ function Login() {
           <a href="#" className={styles["forgot-password"]}>
             Forgot password?
           </a>
-          <button className={styles["login-button"]}>Log In</button>
+          <button type="submit" className={styles["login-button"]}>
+            Log In
+          </button>
         </form>
         <div className={styles["or-container"]}>
           <span>or</span>

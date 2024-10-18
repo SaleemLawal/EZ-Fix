@@ -1,0 +1,140 @@
+.ezfix-homepage {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+}
+
+.services-section {
+  margin-bottom: 20px;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.services-header a {
+  color: black;
+  font-size: 12px;
+}
+
+.view-all {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-item {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.pros-section {
+  margin-top: 40px;
+  padding: 1rem;
+  background-color: #fbfeff;
+  border: 0.2px solid black;
+  border-radius: 0.5rem;
+}
+
+.pros-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pro-item {
+  text-align: center;
+}
+
+.pro-avatar {
+  width: 100px;
+  height: 100px;
+  border: 0.2px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.featured-post-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.featured-section {
+  width: 66.67%;
+  padding: 1rem;
+  background-color: #fbfeff;
+  border: 0.2px solid black;
+  border-radius: 0.5rem;
+}
+
+.featured-pros {
+  width: 100%;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.post-project-section {
+  width: 33.33%;
+  padding: 1rem;
+  background-color: #fbfeff;
+  border: 0.2px solid black;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-project-button {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.service-text {
+  text-align: center;
+}

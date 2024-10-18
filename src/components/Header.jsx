@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/Header.module.css";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ isLoggedIn, handleLogout }) => {
   return (
     <>
       <header className={styles["navbar"]}>
@@ -11,9 +12,15 @@ const Header = () => {
           </Link>
         </div>
         <nav className={styles["nav-links"]}>
-          <Link to="/signup-login">Sign Up/Login</Link>
           <Link to="/mission">Mission</Link>
           <Link to="/contact">Contact</Link>
+          {isLoggedIn ? (
+            <button onClick={handleLogout} className={styles["logout-button"]}>
+              Log Out
+            </button>
+          ) : (
+            <Link to="/signup-login">Log In</Link>
+          )}
         </nav>
       </header>
     </>
